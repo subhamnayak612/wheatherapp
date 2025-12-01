@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+</head>
+<link rel="stylesheet" href="wheather.css">
+
+<body>
+    <div class="weather-app">
+
+        <header>
+            <h1>Weather App</h1>
+            <div class="search-bar">
+                <input type="text" id="searchbar" placeholder="Enter city name">
+                <button class="searchbtn" id="btn">Search</button>
+            </div>
+        </header>
+
+        <div class="weather-mid">
+
+            <div class="cityname">
+                <h2 id="city">Keonjhar</h2>
+            </div>
+
+            <div class="weather-icon">
+                <img src="" alt="">
+            </div>
+
+            <div class="temperature">
+                <span id="current-temperature" class="current-temperature">7</span>
+                <span class="temp-unit">°C</span>
+            </div>  
+
+            <div class="weather-details">
+                <div class="detail">
+                    <span class="label">Feels like:</span>
+                    <span class="feels-like">12°C</span>
+                </div>
+
+                <div class="detail">
+                    <span class="label">Humidity:</span>
+                    <span class="humidity">66%</span>
+                </div>
+
+                <div class="detail">
+                    <span class="label">Wind:</span>
+                    <span class="wind">10 m/s</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="errormessage" class="errormessage-hidden">
+            <h3>City not found</h3>
+            <p>Please check the city name again</p>
+        </div>
+
+        <div class="weather-last">
+            <h3>Recent Search</h3>
+            <div id="recentlist" class="recent-list">
+                <div class="recent-item" onclick="weatherapp.getWeatherBycity('Keonjhar')">Keonjhar</div>
+                <div class="recent-item" onclick="weatherapp.getWeatherBycity('London')">London</div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
